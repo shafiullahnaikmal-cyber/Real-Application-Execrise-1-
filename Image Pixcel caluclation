@@ -1,18 +1,25 @@
 from PIL import Image
 
-image_path = input("Enter image path: ")
-
+# Load image
+image_path = "image.jpg"
 img = Image.open(image_path)
 
+# Image dimensions
 width, height = img.size
+
+# Number of channels
 channels = len(img.getbands())
+
+# Data type
 data_type = img.mode
+
+# Sample pixel (top-left pixel)
 sample_pixel = img.getpixel((0, 0))
 
-print("\nImage Inspection Report")
-print("-----------------------")
-print("Width:", width)
-print("Height:", height)
-print("Number of channels:", channels)
-print("Data type:", data_type)
-print("Sample pixel value:", sample_pixel)
+# Display information
+print("Image Inspection Report")
+print("------------------------")
+print(f"Width: {width} pixels")
+print(f"Height: {height} pixels")
+print(f"Number of channels: {channels}")
+print(f"Data type / mode: {data_type}")
