@@ -1,4 +1,3 @@
-from PTI  import 2021_06_22_17_49_IMG_5171.JPG
 
 # Load image
 image_path = "image.jpg"
